@@ -31,8 +31,8 @@ function insidesparkscale(){
     const tl = gsap.timeline();
 
     tl.to("#circle1",{duration:1, alpha:0},"same2")
-      .from(".inside1",{duration:1, scaleX:0, scaleY: 0, transformOrigin: "50% 50%", ease: "none"},"same2")
-      .from(".inside2",{duration:1, scaleX:0, scaleY: 0, transformOrigin: "50% 50%", ease: "none"}, ">-=50%");
+      .from(".inside1",{duration:1, alpha:0, scaleX:0, scaleY: 0, transformOrigin: "50% 50%", ease: "none"},"same2")
+      .from(".inside2",{duration:1, alpha:0, scaleX:0, scaleY: 0, transformOrigin: "50% 50%", ease: "none"}, ">-=30%");
 
     return tl;
 }
@@ -41,9 +41,8 @@ function outsidesparkscale(){
 
     const tl = gsap.timeline();
 
-    tl.from("#circle2",{duration:1, alpha:0})
-      .from(".outside1",{duration:1, scaleX:0, scaleY: 0, x:0, y:0, transformOrigin: "50% 50%", ease: "none"})
-      .from(".outside2",{duration:1, scaleX:0, scaleY: 0, x:0, y:0, transformOrigin: "50% 50%", ease: "none"}, ">-=50%");
+    tl.from(".outside1",{duration:1, scaleX:0, scaleY: 0, x:-2, y:-2, transformOrigin: "50% 50%", ease: "none"})
+      .from(".outside2",{duration:1, scaleX:0, scaleY: 0, x:-2, y:-2, transformOrigin: "50% 50%", ease: "none"}, ">-=50%");
 
     return tl;
 }
@@ -62,14 +61,10 @@ function sparkrotate(){
 
     const tl = gsap.timeline();
 
-    tl.to("#extraspark",{duration:1, rotation: 360, transformOrigin: "50% 50%", ease: "none"},"same3")
+    tl.to("#morespark",{duration:1, rotation: 360, transformOrigin: "50% 50%", ease: "none"},"same3")
       .to("#anotherspark",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same3")
       .to("#insidespark",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same3")
-      .to("#outsidespark",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same3")
-      .to("#extraspark",{duration:1, rotation: 0, transformOrigin: "50% 50%", ease: "none"},"same3")
-      .to("#anotherspark",{duration:1, rotation: 0, transformOrigin: "50% 50%", ease: "none"},"same3")
-      .to("#insidespark",{duration:1, rotation: 0, transformOrigin: "50% 50%", ease: "none"},"same3")
-      .to("#outsidespark",{duration:1, rotation: 0, transformOrigin: "50% 50%", ease: "none"},"same3");
+      .to("#outsidespark",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same3");
 
     return tl;
 }
@@ -78,18 +73,30 @@ function sparkseperate(){
 
     const tl = gsap.timeline();
 
-    tl.to("#extraspark1",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path2", align: "#path2"}, ease: "none"},"same4")
-      .to("#extraspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path3", align: "#path3"}, ease: "none"},"same4")
-      .to("#extraspark3",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path4", align: "#path4"}, ease: "none"},"same4")
-      .to("#extraspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path5", align: "#path5"}, ease: "none"},"same4")
-      .to("#extraspark5",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path6", align: "#path6"}, ease: "none"},"same4")
-      .to("#extraspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path7", align: "#path7"}, ease: "none"},"same4")
-      .to("#extraspark7",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path8", align: "#path8"}, ease: "none"},"same4")
-      .to("#extraspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path9", align: "#path9"}, ease: "none"},"same4")
-      .to("#extraspark9",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path10", align: "#path10"}, ease: "none"},"same4")
-      .to("#extraspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path11", align: "#path11"}, ease: "none"},"same4")
-      .to("#extraspark11",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path12", align: "#path12"}, ease: "none"},"same4")
-      .to("#extraspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path1", align: "#path1"}, ease: "none"},"same4");
+    tl.to("#extraspark1",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path2", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path3", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark3",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path4", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path5", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark5",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path6", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path7", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark7",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path8", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path9", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark9",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path10", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path11", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark11",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path12", align: "#self"}, ease: "none"},"same4")
+      .to("#extraspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path1", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark1",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path13", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path14", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark3",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path15", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path16", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark5",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path17", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path18", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark7",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path19", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path20", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark9",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path21", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path22", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark11",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path23", align: "#self"}, ease: "none"},"same4")
+      .to("#finalspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path24", align: "#self"}, ease: "none"},"same4");
 
     return tl;
 }
