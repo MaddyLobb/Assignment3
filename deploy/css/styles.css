@@ -393,11 +393,6 @@ p {
   padding: 0;
 }
 
-h1 {
-  font-size: 6.25rem;
-  color: red;
-}
-
 /* =============
     Buttons
 ============= */
@@ -428,3 +423,19 @@ textarea {
 /* =============
     Footer
 ============= */
+#animation {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: grid;
+  grid-template-areas: ". animation .";
+  grid-template-columns: auto 90% auto;
+}
+#animation > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: animation;
+}
