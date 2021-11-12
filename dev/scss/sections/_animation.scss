@@ -3,6 +3,7 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    background-color: $navy;
 
     display: grid;
     grid-template-areas: ". animation .";
