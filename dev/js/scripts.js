@@ -65,7 +65,7 @@ function sparkrotate(){
     tl.to("#extraspark",{duration:1, rotation: 360, transformOrigin: "50% 50%", ease: "none"},"same")
       .to("#extraspark2",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same")
       .to("#insidespark",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same")
-      .to("#outsidespark",{duration:1, rotation: 360, transformOrigin: "50% 50%", ease: "none"},"same");
+      .to("#outsidespark",{duration:1, rotation: -360, transformOrigin: "50% 50%", ease: "none"},"same");
 
     return tl;
 }
