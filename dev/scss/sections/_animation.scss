@@ -7,7 +7,7 @@
 
     display: grid;
     grid-template-areas: ". animation .";
-    grid-template-columns: auto 90% auto;
+    grid-template-columns: auto 50% auto;
 
     >div{
         height: 100%;
