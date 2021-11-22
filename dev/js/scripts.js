@@ -5,7 +5,15 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 gsap.registerPlugin(GSDevTools, MotionPathPlugin);
 
 
-gsap.set("#centere path", {autoAlpha: 0})
+gsap.set("#centere path", {autoAlpha: 0});
+gsap.set("#backbottome path", {autoAlpha: 0})
+gsap.set("#backtope path", {autoAlpha: 0})
+gsap.set("#tope path", {autoAlpha: 0})
+gsap.set("#bottome path", {autoAlpha: 0})
+gsap.set("#slantleftm path", {autoAlpha: 0})
+gsap.set("#slantrightm path", {autoAlpha: 0})
+gsap.set("#tallrightm path", {autoAlpha: 0})
+gsap.set("#tallleftm path", {autoAlpha: 0})
 
 
 let mainTL = gsap.timeline();
@@ -14,8 +22,8 @@ function circle1roll(){
 
     const tl = gsap.timeline();
 
-    tl.from("#circle1",{duration:1, rotation: 360, x: 503, transformOrigin: "50% 50%"},"same1")
-      .from("#dropshadow",{duration:1, x: 503},"same1");
+    tl.from("#circle1",{duration:.75, rotation: 360, x: 503, transformOrigin: "50% 50%"},"same1")
+      .from("#dropshadow",{duration:.75, x: 503},"same1");
 
     return tl;
 }
@@ -24,8 +32,9 @@ function circle1bounce(){
 
     const tl = gsap.timeline();
 
-    tl.to("#circle1",{duration:1, y: -147})
-      .to("#circle1",{duration:1, y: 0, ease: "bounce.out"});
+    tl.to("#circle1",{duration:.25, y: 17})
+      .to("#circle1",{duration:.75, y: -147})
+      .to("#circle1",{duration:.5, y: 0, ease: "bounce.out"});
 
     return tl;
 }
@@ -74,36 +83,44 @@ function sparkrotate(){
     return tl;
 }
 
-function sparkseperate(){
+function sparkseperate1(){
 
     const tl = gsap.timeline();
 
     tl.to("#extraspark1",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path2", align: "#self"}, ease: "none"},"same4")
-      .to("#extraspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path3", align: "#self"}, ease: "none"},"same5")
       .to("#extraspark3",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path4", align: "#self"}, ease: "none"},"same4")
-      .to("#extraspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path6", align: "#self"}, ease: "none"},"same5")
       .to("#extraspark5",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path5", align: "#self"}, ease: "none"},"same4")
-      .to("#extraspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path7", align: "#self"}, ease: "none"},"same5")
       .to("#extraspark7",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path8", align: "#self"}, ease: "none"},"same4")
-      .to("#extraspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path9", align: "#self"}, ease: "none"},"same5")
       .to("#extraspark9",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path10", align: "#self"}, ease: "none"},"same4")
-      .to("#extraspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path11", align: "#self"}, ease: "none"},"same5")
       .to("#extraspark11",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path12", align: "#self"}, ease: "none"},"same4")
-      .to("#extraspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path1", align: "#self"}, ease: "none"},"same5")
       .to("#finalspark1",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path13", align: "#self"}, ease: "none"},"same4")
-      .to("#finalspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path14", align: "#self"}, ease: "none"},"same5")
       .to("#finalspark3",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path15", align: "#self"}, ease: "none"},"same4")
-      .to("#finalspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path16", align: "#self"}, ease: "none"},"same5")
       .to("#finalspark5",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path17", align: "#self"}, ease: "none"},"same4")
-      .to("#finalspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path18", align: "#self"}, ease: "none"},"same5")
       .to("#finalspark7",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path19", align: "#self"}, ease: "none"},"same4")
-      .to("#finalspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path20", align: "#self"}, ease: "none"},"same5")
       .to("#finalspark9",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path21", align: "#self"}, ease: "none"},"same4")
-      .to("#finalspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path22", align: "#self"}, ease: "none"},"same5")
-      .to("#finalspark11",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path23", align: "#self"}, ease: "none"},"same4")
-      .to("#finalspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path24", align: "#self"}, ease: "none"},"same5");
+      .to("#finalspark11",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path23", align: "#self"}, ease: "none"},"same4");
 
     return tl;
+}
+
+function sparkseperate2(){
+
+  const tl = gsap.timeline();
+
+  tl.to("#extraspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path3", align: "#self"}, ease: "none"},"same5")
+    .to("#extraspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path6", align: "#self"}, ease: "none"},"same5")
+    .to("#extraspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path7", align: "#self"}, ease: "none"},"same5")
+    .to("#extraspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path9", align: "#self"}, ease: "none"},"same5")
+    .to("#extraspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path11", align: "#self"}, ease: "none"},"same5")
+    .to("#extraspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path1", align: "#self"}, ease: "none"},"same5")
+    .to("#finalspark2",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path14", align: "#self"}, ease: "none"},"same5")
+    .to("#finalspark4",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path16", align: "#self"}, ease: "none"},"same5")
+    .to("#finalspark6",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path18", align: "#self"}, ease: "none"},"same5")
+    .to("#finalspark8",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path20", align: "#self"}, ease: "none"},"same5")
+    .to("#finalspark10",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path22", align: "#self"}, ease: "none"},"same5")
+    .to("#finalspark12",{duration:1, transformOrigin: "50% 50%", motionPath: {path:"#path24", align: "#self"}, ease: "none"},"same5");
+
+  return tl;
 }
 
 
@@ -112,53 +129,39 @@ function innsersparkgrow(){
 
     const tl = gsap.timeline();
 
-    // tl.to("#inspark4",{duration:1, scaleX: 1.5, ease: "none"})
-      tl.to("#centere path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
-      // .to("#em", {scale: 1, duration: 50, rotationY: 150}, "<")
-      // .fromTo("#em", {perspective: '20rem'}, {perspective: '180rem', duration: 50}, "<")
-
-      .timeScale(8);
+     tl.to("#inspark4",{duration:1, scaleX: 1.5, ease: "none"})
 
     return tl;
 }
 
-// function eform(){
+ function eform(){
 
-//     const tl = gsap.timeline();
+     const tl = gsap.timeline();
 
-//     tl.from(".ept1",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".ept2",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".ept3",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".ept4",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".ept5",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".ept6",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".ept7",{duration:.25, alpha: 0, ease: "none"});
+     tl.to("#centere path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
+       .to("#backbottome path", { autoAlpha: 1, duration: 1, stagger: 0.05, ease: "power4.out" })
+       .to("#backtope path", { autoAlpha: 1, duration: 1, stagger: 0.05, ease: "power4.out" })
+       .to("#tope path", { autoAlpha: 1, duration: 1, stagger: 0.05, ease: "power4.out" })
+       .to("#bottome path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
 
-//     return tl;
-// }
+       .timeScale(8);
 
-// function mform(){
+     return tl;
+}
 
-//     const tl = gsap.timeline();
+ function mform(){
 
-//     tl.from(".mpt1",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt2",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt3",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt4",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt5",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt6",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt7",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt8",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt9",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt10",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt11",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt12",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt13",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt14",{duration:.25, alpha: 0, ease: "none"})
-//       .from(".mpt15",{duration:.25, alpha: 0, ease: "none"});
+     const tl = gsap.timeline();
 
-//     return tl;
-// }
+     tl.to("#slantleftm path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
+       .to("#slantrightm path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
+       .to("#tallrightm path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
+       .to("#tallleftm path", { autoAlpha: 1, duration: 1, stagger: -0.05, ease: "power4.out" })
+
+       .timeScale(8);
+
+     return tl;
+}
 
 function textcomein(){
 
@@ -186,10 +189,11 @@ mainTL.add(circle1roll())
       .add(outsidesparkscale(), "-=30%")
       .add(extrasparkenter(), ">-=50%")
       .add(sparkrotate())
-      .add(sparkseperate())
+      .add(sparkseperate1())
+      .add(sparkseperate2(),"-=50%")
       .add(innsersparkgrow())
-      // .add(eform(),"same6")
-      // .add(mform(),"same6")
+      .add(eform(),"same6")
+      .add(mform(),"same6")
       .add(textcomein())
       .add(eandmswitch());
 
