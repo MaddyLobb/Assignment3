@@ -129,7 +129,7 @@ function innsersparkgrow(){
 
     const tl = gsap.timeline();
 
-     tl.to("#inspark4",{duration:.75, scaleX: 1.5, ease: "none"})
+     tl.to("#inspark4",{duration:.05, scaleX: 1.5, ease: "none"})
 
     return tl;
 }
@@ -138,13 +138,13 @@ function innsersparkgrow(){
 
      const tl = gsap.timeline();
 
-     tl.to("#centere path", { autoAlpha: 1, duration: .45, stagger: -0.25, ease: "power4.out" })
-       .to("#backbottome path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same1")
-       .to("#backtope path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same1")
-       .to("#tope path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same2")
-       .to("#bottome path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same2")
+     tl.to("#centere path", { autoAlpha: 1, duration: .45, stagger: -0.05, ease: "power4.out" })
+       .to("#backbottome path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same1")
+       .to("#backtope path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same1")
+       .to("#tope path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
+       .to("#bottome path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
 
-       .timeScale(8);
+       .timeScale(10);
 
      return tl;
 }
@@ -153,12 +153,12 @@ function innsersparkgrow(){
 
      const tl = gsap.timeline();
 
-     tl.to("#slantleftm path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same1")
-       .to("#slantrightm path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same1")
-       .to("#tallrightm path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same2")
-       .to("#tallleftm path", { autoAlpha: 1, duration: .45, stagger: 0.25, ease: "power4.out" },"same2")
+     tl.to("#slantleftm path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same1")
+       .to("#slantrightm path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same1")
+       .to("#tallrightm path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
+       .to("#tallleftm path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
 
-       .timeScale(8);
+       .timeScale(10);
 
      return tl;
 }
@@ -167,7 +167,7 @@ function textcomein(){
 
     const tl = gsap.timeline();
 
-    tl.from("#text",{duration:.5, alpha: 0, ease: "none"});
+    tl.from("#text",{duration:.25, alpha: 0, ease: "none"});
 
     return tl;
 }
@@ -176,9 +176,10 @@ function eandmswitch(){
 
     const tl = gsap.timeline();
 
-    tl.to("#em",{duration:.5, alpha:0, ease: "none"},"same5")
-      .from(".realem",{duration:.5, alpha: 0, ease: "none"},"same5")
-      .to("#text",{duration:.5, fill:"#045F7D", ease: "none"},"same5");
+    tl.to("#em",{duration:.25, alpha:0, ease: "none"},"same5")
+      .from(".realem",{duration:.25, alpha: 0, ease: "none"},"same5")
+      .to("#text",{duration:.25, fill:"#045F7D", ease: "none"},"same5")
+      .to("#text",{duration:.25, fill:"#045F7D", alpha:1});
 
     return tl;
 }
