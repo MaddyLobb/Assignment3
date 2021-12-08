@@ -144,7 +144,7 @@ function innsersparkgrow(){
        .to("#tope path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
        .to("#bottome path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
 
-       .timeScale(10);
+       .timeScale(9);
 
      return tl;
 }
@@ -158,7 +158,7 @@ function innsersparkgrow(){
        .to("#tallrightm path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
        .to("#tallleftm path", { autoAlpha: 1, duration: .45, stagger: 0.05, ease: "power4.out" },"same2")
 
-       .timeScale(10);
+       .timeScale(9);
 
      return tl;
 }
@@ -167,7 +167,7 @@ function textcomein(){
 
     const tl = gsap.timeline();
 
-    tl.from("#text",{duration:.25, alpha: 0, ease: "none"});
+    tl.from("#text",{duration:.45, alpha: 0, ease: "none"});
 
     return tl;
 }
@@ -176,7 +176,7 @@ function eandmswitch(){
 
     const tl = gsap.timeline();
 
-    tl.to("#em",{duration:.25, alpha:0, ease: "none"},"same5")
+    tl.to("#em",{duration:.35, alpha:0, ease: "none"},"same5")
       .from(".realem",{duration:.25, alpha: 0, ease: "none"},"same5")
       .to("#text",{duration:.25, fill:"#045F7D", ease: "none"},"same5")
       .to("#text",{duration:.25, fill:"#045F7D", alpha:1});
